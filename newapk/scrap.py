@@ -18,7 +18,7 @@ def output():
         soup = BeautifulSoup(grab.text, 'html.parser')
         
         # # opening a file in write mode
-        f = open("new.csv", "w+")
+        f = open("urlfile.csv", "w+")
         # traverse paragraphs from soup
         for link in soup.find_all("a"):
             data = link.get('href')
