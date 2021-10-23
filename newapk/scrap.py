@@ -26,8 +26,11 @@ def output():
             f.write("\n")
         
         f.close()
-        return render_template('index.html')
-    return render_template('index.html')
+        return render_template('/templates/downl.html')
+@app.route('/download')    
+def download_file():
+    path="urlfile.csv"
+    return send_file(path, as_attachment=True)
 
 if __name__ == "__main__":
     app.run(debug=True)
